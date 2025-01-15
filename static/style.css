@@ -1,0 +1,137 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3f4f7, #e7e9ec);
+    color: #333;
+}
+
+/* Container for the main content */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Category buttons styling */
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Category section styling */
+.category-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8f9fb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Category title */
+.category-section h2 {
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* List of headlines */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect on headlines */
+li:hover {
+    color: #007bff;
+    background: #f0f8ff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .category-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+/* Styling for the last updated time */
+.last-updated {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Styling for the news summary */
+.summary {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+/* Styling for the news summary */
+.summary {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styling for the "Read more" link */
+.news-link {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}

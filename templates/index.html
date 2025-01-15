@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time News Categorizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time News Categorizer</h1>
+
+        <!-- Section to display last updated time -->
+        <p class="last-updated">Last Updated: {{ last_updated }}</p>
+
+        <!-- Category buttons -->
+        <div class="category-buttons">
+            {% for category in news.keys() %}
+                <button class="category-btn" onclick="showCategory('{{ category }}')">{{ category }}</button>
+            {% endfor %}
+        </div>
+
+        <!-- News sections -->
+        {% for category, items in news.items() %}
+            <div class="category-section" id="{{ category }}" style="display: none;">
+                <h2>{{ category }}</h2>
+                <ul>
+                    {% for headline, summary, link in items %}
+                        <li>
+                            <strong>{{ headline }}</strong>
+                            <p class="summary">{{ summary }}</p>
+                            <a href="{{ link }}" target="_blank" class="news-link">Read more</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        // Function to show selected category and hide others
+        function showCategory(category) {
+            // Hide all category sections
+            let sections = document.querySelectorAll('.category-section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected category section
+            let selectedSection = document.getElementById(category);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
